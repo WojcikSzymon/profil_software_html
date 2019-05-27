@@ -1,0 +1,68 @@
+
+*, html{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  height: 100vh;
+  grid-gap: 40px;
+  grid-template-columns: 1fr 1fr 1.3fr 1.3fr;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+      "sidebar header header header"
+      "sidebar . headerbox headerbox2"
+      "sidebar smallbox sect1 sect2"
+      "sidebar smallbox footer footer"
+}
+
+body * {
+  padding: 20px;
+}
+
+nav {
+  grid-area: sidebar;
+  height: 100%;
+  background-color: lightsteelblue;
+  position: sticky;
+  overflow: auto;
+}
+
+header {
+  grid-area: header;
+  margin: 15px;
+  background-color: lightsteelblue;
+  overflow: auto;
+}
+
+.headerbox {
+  grid-area: headerbox;
+  background-color: lightsteelblue;
+  margin-left: 50px;
+  margin-right: -40px;
+}
+
+.smallbox {
+  grid-area: smallbox;
+  background-color: lightsteelblue;
+}
+
+.sect1 {
+  grid-area: sect1;
+  background-color: lightsteelblue;
+  margin-right: 15px;
+}
+
+.sect2 {
+  grid-area: sect2;
+  background-color: lightsteelblue;
+  margin-right: 15px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: lightsteelblue;
+  margin-right: 20px;
+}
